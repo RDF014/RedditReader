@@ -3,11 +3,6 @@ const initalState = {
     posts: [],
     isFetching: false,
     invalidReq: false
-  },
-  Gaming: {
-    posts: [],
-    isFetching: false,
-    invalidReq: false
   }
 };
 
@@ -17,11 +12,6 @@ const initalPosts = {
   invalidReq: false
 };
 
-/*
-payload = {
-  subreddit: 'example'
-}
-*/
 
 function subreddits (state = initalState, action) {
   const { type, payload } = action;
@@ -39,15 +29,15 @@ function subreddits (state = initalState, action) {
         return newState;
       }, {});
     case 'REQUEST_POSTS':
-      // return {
-      //   ...state,
-      //   [payload.subreddit]: posts(state[payload.subreddit], action)
-      // }
+      return {
+        ...state,
+        [payload.subreddit]: posts(state[payload.subreddit], action)
+      }
     case 'RETRIEVE_POSTS':
-      // return {
-      //   ...state,
-      //   [payload.subreddit]: posts(state[payload.subreddit], action)
-      // }
+      return {
+        ...state,
+        [payload.subreddit]: posts(state[payload.subreddit], action)
+      }
     case 'INVALID_REQUEST':
       return {
         ...state,

@@ -6,7 +6,23 @@ import * as actionCreators from '../../actions/creator';
 
 import Checkbox from '../presentation/Checkbox';
 
-const SUBS = ['News', 'Gaming', 'Funny', 'Pics', 'Gifs', 'Videos', 'Aww']
+const SUBS = [
+  'News',
+  'WorldNews',
+  'AskReddit',
+  'IAmA',
+  'Funny',
+  'Pics',
+  'Gifs',
+  'Aww',
+  'Videos',
+  'Gaming',
+  'Movies',
+  'Television',
+  'NBA',
+  'NFL',
+  'MLB'
+];
 
 class Sidebar extends Component {
   renderCheckbox() {

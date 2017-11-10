@@ -10,8 +10,6 @@
   height: 25px;
   padding: 10px;
   color: white;
-  position: fixed;
-  z-index: 1;
 }
 
 .App-title {
@@ -27,21 +25,28 @@
   background-color: white;
   display:flex;
   flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
-  position: fixed;
-  top: 45px;
-  z-index: 1;
 }
 
 .Checkbox {
   margin: 5px;
 }
 
+.Checkbox p {
+  margin: 5px;
+}
+
+.Button {
+    font-size: .9em;
+    background-color: #b9b9b9;
+    width: 25%;
+    padding: 5px;
+    margin: 5px;
+}
+
 .Post-Container {
   width: 100%;
-  position: relative;
-  top: 100px;
-  /*z-index: -1;*/
 }
 
 .Post {
@@ -54,7 +59,6 @@
 
 .Post figure {
   margin: 3px;
-  /*width: 10%;*/
 }
 
 .Post img {
@@ -71,7 +75,7 @@
 
 .Post article a{
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .Post .Thumbnail {
