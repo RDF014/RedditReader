@@ -39,7 +39,7 @@ export function retrievePosts (subreddit, posts) {
 export function fetchPosts (subreddit) {
   return (dispatch, getState) => {
     dispatch( requestPosts(subreddit) );
-    axios.get(`https://www.reddit.com/r/${subreddit}.json?limit=10`)
+    axios.get(`https://www.reddit.com/r/${subreddit}.json`)
       .then(res => dispatch( retrievePosts(subreddit, res) ) )
       .catch(err => dispatch( invalidRequest(subreddit) ) );
   }
