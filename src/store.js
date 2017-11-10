@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
-// reducers
 import rootReducer from './reducers';
 
 // to enable the redux dev tool for chrome
@@ -15,7 +14,8 @@ const store = createStore(
   enhancers,
   applyMiddleware(
     thunkMiddleware,
-    createLogger()
+    // Uncomment out 'createLogger()' to enable logging of Redux actions 
+    // createLogger()
   )
 );
 export default store;
