@@ -11,7 +11,7 @@ class Posts extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      isRandomized: true
+      isRandomized: false
     }
   }
 
@@ -30,14 +30,14 @@ class Posts extends Component {
         return removeSubreddit(sub);
       }
       if (!subreddits[sub].isFetching && subreddits[sub].posts.length === 0) {
-        fetchPosts(sub);
+        return fetchPosts(sub);
       }
     })
   }
 
   renderAllPosts () {
     const { subreddits } = this.props;
-    return Object.keys(subreddits).map(sub => {
+    return Object.keys(subreddits).reverse().map(sub => {
       return subreddits[sub].posts.map(({ data }) => <Post key={data.id} data={data} /> );
     })
   }
